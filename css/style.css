@@ -1,0 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #ccc;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+#title{
+    margin: 40px;
+    text-align: center;
+    text-shadow: 2px 3px 2px #ccc;
+    font-size: 50px;
+}
+#container{
+    height: 600px;
+    width: 600px;
+    border-radius: 15px;
+    background-color: rgb(63 109 129);
+    box-shadow: 2px 3px 4px ;
+}
+#container h2{
+    text-align: center;
+    text-shadow: 1px 2px 4px #ccc;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#enterName{
+    margin: 6px;
+    border-radius: 8px;
+    height: 30px;
+}
+#enterTel{
+    margin: 6px;
+    border-radius: 8px;
+    height: 30px;
+}
+#enterDir{
+    margin: 6px;
+    border-radius: 8px;
+    height: 30px;
+
+}
+#container form{
+    display: flex;
+    flex-direction: column;
+}
+#send{
+    background-color: rgb(18, 104, 166);
+    color: white;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    margin: 15px;
+}
+.error{
+    color: rgb(250, 0, 0);
+}
+form label{
+    font-size: 15px;
+    margin: 5px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.695);
+}
