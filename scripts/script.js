@@ -28,30 +28,22 @@ function dataValidation (){
     const enterName = document.getElementById("enterName")
     const enterTel = document.getElementById("enterTel")
     const enterDir = document.getElementById("enterDir")
+    const labelName = document.getElementById("labelName")
+    const labelTel = document.getElementById("labelTel")
+    const labelDir = document.getElementById("labelDir")
     send.addEventListener("click",(e)=>{
         e.preventDefault()
-        if (enterName.value === "" || !isNaN(enterName.value)){
-            let labelName = document.getElementById("labelName")
-            labelName.className = "error"
-        }else{
-            person.name = enterName.value
-        }
-        if (enterTel.value.length != 10 || isNaN(enterTel.value) ){
-            let labelTel = document.getElementById("labelTel")
-            labelTel.className = "error"
-        }else{
-            person.tel = enterTel.value
-        }
-        if ( isNaN(enterDir.value) || enterDir.value > 500 || enterDir.value === ""){
-            let labelDir = document.getElementById("labelDir")
-            labelDir.className = "error"
-        }else{
-            person.dir = enterDir.value
-        }
+        enterName.value === "" || !isNaN(enterName.value) ? labelName.className = "error" : person.name = enterName.value
+        enterTel.value.length != 10 || isNaN(enterTel.value) ? labelTel.className = "error" : person.tel = enterTel.value
+        isNaN(enterDir.value) || enterDir.value > 500 || enterDir.value === "" ?  labelDir.className = "error" : person.dir = enterDir.value
         if (person.name != undefined && person.dir != undefined && person.tel != undefined) {
-        container.innerHTML = "" 
+            const completeForm = document.querySelector("#container form")
+            const completeH = document.querySelector("#container h2")
+            Swal.fire("Let's place your order")
+            completeForm.className = "animate__animated animate__zoomOut"
+            completeH.className = "animate__animated animate__zoomOut"
         }
+console.log(person.tel)
     })
 }
 dataValidation ()
-

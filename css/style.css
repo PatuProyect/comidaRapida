@@ -20,14 +20,18 @@ main{
     height: 600px;
     width: 600px;
     border-radius: 15px;
-    background-color: rgb(63 109 129);
-    box-shadow: 2px 3px 4px ;
+    background: rgb(0,139,242);
+    background: -moz-linear-gradient(352deg, rgba(0,139,242,1) 10%, rgba(25,45,153,1) 22%, rgba(51,173,205,1) 45%, rgba(204,254,246,1) 78%, rgba(204,231,251,1) 95%);
+    background: -webkit-linear-gradient(352deg, rgba(0,139,242,1) 10%, rgba(25,45,153,1) 22%, rgba(51,173,205,1) 45%, rgba(204,254,246,1) 78%, rgba(204,231,251,1) 95%);
+    background: linear-gradient(352deg, rgba(0,139,242,1) 10%, rgba(25,45,153,1) 22%, rgba(51,173,205,1) 45%, rgba(204,254,246,1) 78%, rgba(204,231,251,1) 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#008bf2",endColorstr="#cce7fb",GradientType=1);.Microsoft.gradient(startColorstr="#443b70",endColorstr="#208f43",GradientType=1);    box-shadow: 7px 8px 13px ;
+    border: 1px solid;
 }
 #container h2{
     text-align: center;
-    text-shadow: 1px 2px 4px #ccc;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    text-shadow: 1px 2px 4px rgb(49, 62, 95);
+    margin-bottom: 90px;
+    margin-top: 50px;
 }
 #enterName{
     margin: 6px;
@@ -49,19 +53,48 @@ main{
     display: flex;
     flex-direction: column;
 }
-#send{
-    background-color: rgb(18, 104, 166);
-    color: white;
+/* #send{
+    background-color: rgb(18, 104, 166); 
+    color: white; 
     border-radius: 5px;
     width: 80px;
     height: 30px;
     margin: 15px;
-}
+} */
 .error{
     color: rgb(250, 0, 0);
 }
 form label{
     font-size: 15px;
     margin: 5px;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.695);
+    text-shadow: 1px 1px 2px rgb(49, 62, 95);
 }
+
+#send {
+    
+    min-width: 130px;
+    width: 50px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: rgb(30, 167, 35);
+    box-shadow: 0 5px hsl(245, 82%, 85%);
+}
+#send:hover {
+    background: #2f6ccf;
+    box-shadow: 0 3px #4433ff;
+    top: 1px;
+}
+#send:active {
+    box-shadow: 0 0 #4433ff;
+    top: 5px;
+}
+
