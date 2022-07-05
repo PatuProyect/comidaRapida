@@ -17,50 +17,43 @@ main{
     font-size: 50px;
 }
 #container{
-    height: 600px;
+    height: 800px;
     width: 600px;
     border-radius: 15px;
     background: rgb(0,139,242);
     background: -moz-linear-gradient(352deg, rgba(0,139,242,1) 10%, rgba(25,45,153,1) 22%, rgba(51,173,205,1) 45%, rgba(204,254,246,1) 78%, rgba(204,231,251,1) 95%);
     background: -webkit-linear-gradient(352deg, rgba(0,139,242,1) 10%, rgba(25,45,153,1) 22%, rgba(51,173,205,1) 45%, rgba(204,254,246,1) 78%, rgba(204,231,251,1) 95%);
     background: linear-gradient(352deg, rgba(0,139,242,1) 10%, rgba(25,45,153,1) 22%, rgba(51,173,205,1) 45%, rgba(204,254,246,1) 78%, rgba(204,231,251,1) 95%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#008bf2",endColorstr="#cce7fb",GradientType=1);.Microsoft.gradient(startColorstr="#443b70",endColorstr="#208f43",GradientType=1);    box-shadow: 7px 8px 13px ;
+    box-shadow: 7px 8px 13px ;
     border: 1px solid;
 }
-#container h2{
+.title {
     text-align: center;
     text-shadow: 1px 2px 4px rgb(49, 62, 95);
-    margin-bottom: 90px;
+    margin-bottom: 40px;
     margin-top: 50px;
 }
 #enterName{
     margin: 6px;
     border-radius: 8px;
-    height: 30px;
+    height: 35px;
 }
 #enterTel{
     margin: 6px;
     border-radius: 8px;
-    height: 30px;
+    height: 35px;
 }
 #enterDir{
     margin: 6px;
     border-radius: 8px;
-    height: 30px;
+    height: 35px;
 
 }
 #container form{
     display: flex;
     flex-direction: column;
 }
-/* #send{
-    background-color: rgb(18, 104, 166); 
-    color: white; 
-    border-radius: 5px;
-    width: 80px;
-    height: 30px;
-    margin: 15px;
-} */
+
 .error{
     color: rgb(250, 0, 0);
 }
@@ -71,7 +64,8 @@ form label{
 }
 
 #send {
-    
+    margin-top: 30px;
+    left: 225px;
     min-width: 130px;
     width: 50px;
     height: 40px;
@@ -98,3 +92,146 @@ form label{
     top: 5px;
 }
 
+.boxProduct img{
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boxProduct {
+    text-align: center;
+}
+
+.slick-prev{
+    left: 2px !important;
+}
+
+.slick-next{
+    right: 2px !important;
+}
+
+.btnBuy{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    min-width: 130px;
+    width: 40px;
+    height: 30px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: rgb(30, 167, 35);
+    box-shadow: 0 5px hsl(245, 82%, 85%);
+}
+.btnBuy:hover{
+    background: #2f6ccf;
+    box-shadow: 0 3px #4433ff;
+    top: 1px;
+}
+.btnBuy:active{
+    box-shadow: 0 0 #4433ff;
+    top: 5px;
+}
+
+#divCart{
+    display:flex;
+    
+    overflow: auto;
+}
+.boxCart{ 
+    margin: 7px;
+    text-align: center;
+}
+
+.boxCart img{
+    width: 100px;
+    height: 100px;
+}
+
+#btnPersonalize{
+    border-radius: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 110px;
+    height: 20px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: rgb(30, 167, 35);
+    box-shadow: 0 5px hsl(245, 82%, 85%);
+}
+#btnPersonalize:hover{
+    background: #4ccf2f;
+    box-shadow: 0 3px #33ff85;
+    top: 1px;
+}
+#btnPersonalize:active{
+    box-shadow: 0 0 #4433ff;
+    top: 5px;
+}
+
+#btnDelete{
+    border-radius: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 110px;
+    height: 20px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: rgb(167, 30, 30);
+    box-shadow: 0 5px hsl(245, 82%, 85%);
+}
+#btnDelete:hover{
+    background: #cf2f2f;
+    box-shadow: 0 3px #33ff85;
+    top: 1px;
+}
+#btnDelete:active{
+    box-shadow: 0 0 #ff3333;
+    top: 5px;
+}
+
+#divCart::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+#divCart::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);        /* color of the tracking area */
+}
+
+#divCart::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 0, 0);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid rgb(89, 205, 60);  /* creates padding around scroll thumb */
+}
+
+#qOrder{
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+#qPrice{
+    background-color: #fff;
+}
