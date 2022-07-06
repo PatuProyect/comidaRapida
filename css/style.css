@@ -103,14 +103,6 @@ form label{
     text-align: center;
 }
 
-.slick-prev{
-    left: 2px !important;
-}
-
-.slick-next{
-    right: 2px !important;
-}
-
 .btnBuy{
     margin-top: 7px;
     margin-bottom: 7px;
@@ -234,4 +226,11 @@ form label{
 
 #qPrice{
     background-color: #fff;
+}
+
+.boxPersonalize{
+    position: fixed;
+    background-color: red;
+    height: 50px;
+    width: 600px;
 }

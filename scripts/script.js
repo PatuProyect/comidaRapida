@@ -128,20 +128,14 @@ function yourOrder (){
     const titleOrder = document.createElement("h2")
     titleOrder.setAttribute ("class", "title animate__animated animate__zoomIn")
     titleOrder.innerText = ("Your order:")
-
     const divCart = document.createElement("div")
     divCart.setAttribute("id","divCart")
     divCart.setAttribute("class", "animate__animated animate__zoomIn" )
-
     const qOrder = document.createElement("p")
     qOrder.setAttribute("id","qOrder")
-
     const qPrice = document.createElement("p")
     qPrice.setAttribute("id","qPrice")
-
     container.append(titleOrder,divCart,qOrder,qPrice)
-
-    
 }
 
 
@@ -154,7 +148,7 @@ function cart (){
         provide.innerHTML +=`
         <img src="${product.img}">
         <h3>${product.name}</h3>
-        <button id="btnPersonalize">Personalize</button>
+        <button id="btnPersonalize"onclick="btnPersonalize(${product.id})">Personalize</button>
         <button id="btnDelete"onclick="btnDelete(${product.id})">Delete</button>`
         divCart.appendChild(provide)
     })
@@ -176,7 +170,6 @@ function orderDetail (){
     qPrice.innerText = "Total price: " + totalPrice()
 }
 
-
 function btnDelete(productId){
     const item = person.order.find((product) => product.id ===productId)
     const indice = person.order.indexOf(item)
@@ -184,4 +177,16 @@ function btnDelete(productId){
     totalPrice ()
     orderDetail ()
     cart()
+} 
+
+function windowsPersonalize (){
+    const divPerso = document.createElement("div")
+    divPerso.setAttribute("class","boxPersonalize")
+    container.append(divPerso)
+}
+
+function btnPersonalize(){
+    const divPerso = document.createElement("div")
+    divPerso.setAttribute("class","boxPersonalize")
+    container.append(divPerso)
 } 
