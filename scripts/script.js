@@ -32,6 +32,7 @@ function dataValidation (){
     const labelName = document.getElementById("labelName")
     const labelTel = document.getElementById("labelTel")
     const labelDir = document.getElementById("labelDir")
+
     send.addEventListener("click",(e)=>{
         e.preventDefault()
         enterName.value === "" || !isNaN(enterName.value) ? labelName.className = "error" : person.name = enterName.value
@@ -179,11 +180,25 @@ function btnDelete(productId){
     cart()
 } 
 
-function windowsPersonalize (){
-    const divPerso = document.createElement("div")
-    divPerso.setAttribute("class","boxPersonalize")
-    container.append(divPerso)
+const footerCreate = document.getElementById("footer")
+
+const fetchLocalData = () =>{
+    fetch('./data.json').then((response)=>response.json())
+    .then((result)=>{
+        renderTitle(result.footer)
+    }).catch((err)=>{
+        console.error(err)
+    })
 }
+
+const renderFooter = (body) =>{
+    let title = document.createElement("p")
+    title.innerText ="Name: " + body.Owner + "\nEmail: " + body.Email + "\nLinkedin: " + body.Linkedin
+    footerCreate.append(title)
+}
+fetchLocalData()
+
+
 
 function btnPersonalize(){
     const divPerso = document.createElement("div")
