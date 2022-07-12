@@ -185,7 +185,7 @@ const footerCreate = document.getElementById("footer")
 const fetchLocalData = () =>{
     fetch('./data.json').then((response)=>response.json())
     .then((result)=>{
-        renderTitle(result.footer)
+        renderFooter(result.footer)
     }).catch((err)=>{
         console.error(err)
     })
@@ -199,9 +199,13 @@ const renderFooter = (body) =>{
 fetchLocalData()
 
 
+const divPerso = document.createElement("div")
 
 function btnPersonalize(){
-    const divPerso = document.createElement("div")
     divPerso.setAttribute("class","boxPersonalize")
+
+    let ingredient = person.order.map(({ingredients})=>ingredients)
+    divPerso.innerHTML = ingredient
+
     container.append(divPerso)
 } 
