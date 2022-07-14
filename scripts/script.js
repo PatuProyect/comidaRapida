@@ -197,15 +197,3 @@ const renderFooter = (body) =>{
     footerCreate.append(title)
 }
 fetchLocalData()
-
-
-const divPerso = document.createElement("div")
-
-function btnPersonalize(){
-    divPerso.setAttribute("class","boxPersonalize")
-
-    let ingredient = person.order.map(({ingredients})=>ingredients)
-    divPerso.innerHTML = ingredient
-
-    container.append(divPerso)
-} 
